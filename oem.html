@@ -1,0 +1,917 @@
+
+<!doctype html >
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Pocket Deep Links</title>
+  <link href="./dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .btn, .panel-heading, .panel-heading h3 {
+      font-size: 32pt;
+    }
+  </style>
+</head>
+<body>
+
+<section class='container'>
+
+      <br>
+      <div class="center-block">
+        <img src="./dist/images/deeplink.png" class="center-block" />
+        <h1 class="text-center">Deep Link Pocket</h1>
+      </div>
+      <br>
+
+      <div class="center-block">
+        <h2>Ajouter des paramètres au deeplink</h2>
+        <form>
+          <label for="linkParam">Paramètre(s) des liens (ex: /1234567 ou ?skill=xxx&...)  </label>
+          <input type="text" placeholder="Paramètres du lien" name="linkParam" id="linkParam" />
+          <input type="submit" value="Valider">
+        </form>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-md-5 panel panel-default">
+          <br>
+          <img src="./dist/images/OrangeEtMoi.png" class="center-block" />
+          <h2 class="text-center">Orange et moi</h2>
+          <br>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">Universal Links</div>
+            <div class="panel-body">
+              <ul class="list-unstyled">
+                                <li class="text-center"><a class="btn btn-primary btn-block" href="#oemccmdsettings" role="button">CCMD (Settings)</a></li>
+                                <li class="text-center"><a class="btn btn-primary btn-block" href="#oemrecetteerablesettings" role="button">Recette Erable (Settings)</a></li>
+                                <li class="text-center"><a class="btn btn-primary btn-block" href="#oemmetroerablesettings" role="button">Métrologie Erable (Settings)</a></li>
+                                <li class="text-center"><a class="btn btn-primary btn-block" href="#oempreproderablesettings" role="button">Prod cachée Erable (Settings)</a></li>
+                                <li class="text-center"><a class="btn btn-primary btn-block" href="#oemproduction" role="button">Production</a></li>
+                              </ul>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">URL Scheme</div>
+            <div class="panel-body">
+              <ul class="list-unstyled">
+                                <li class="text-center"><a class="btn btn-success btn-block" href="#oemsettingsscheme" role="button">Settings</a></li>
+                                <li class="text-center"><a class="btn btn-success btn-block" href="#oemprodscheme" role="button">Production</a></li>
+                              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2"></div>
+
+        <div class="col-md-5 panel panel-default">
+          <br>
+          <img src="./dist/images/MySosh.png" class="center-block" />
+          <h2 class="text-center">MySosh</h2>
+          <br>
+          <div class="panel panel-default">
+            <div class="panel-heading">Universal Links</div>
+            <div class="panel-body">
+              <ul class="list-unstyled">
+                            <li class="text-center"><a class="btn btn-primary btn-block" href="#soshrecetteerablesettings" role="button">Recette Erable (Settings)</a></li>
+                            <li class="text-center"><a class="btn btn-primary btn-block" href="#soshmetroerablesettings" role="button">Métrologie Erable (Settings)</a></li>
+                            <li class="text-center"><a class="btn btn-primary btn-block" href="#soshpreproderablesettings" role="button">Prod cachée Erable (Settings)</a></li>
+                            <li class="text-center"><a class="btn btn-primary btn-block" href="#soshproduction" role="button">Production</a></li>
+                            </ul>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">URL Scheme</div>
+            <div class="panel-body">
+              <ul class="list-unstyled">
+                                <li class="text-center"><a class="btn btn-success btn-block" href="#soshsettingsscheme" role="button">Settings</a></li>
+                                <li class="text-center"><a class="btn btn-success btn-block" href="#soshprodscheme" role="button">Production</a></li>
+                              </ul>
+            </div>
+          </div>
+        </div>
+  </div>
+
+</section>
+
+<section class='container'>
+
+      <div class="panel panel-default">
+      <a name="oemccmdsettings"></a>
+      <div class="panel-heading">
+          <h3><img src="./dist/images/OrangeEtMoi.png" /> Universal Links - CCMD (Settings)</h3>
+      </div>
+      <div class="panel-body">
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/accueil" role="button">/accueil</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/accueil" role="button">/accueil/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/ajout-c" role="button">/ajout-c</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/apps" role="button">/apps</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/avantage" role="button">/avantage</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/avantage" role="button">/avantage/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/avantage-f" role="button">/avantage-f</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/bilan" role="button">/bilan</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/bilan" role="button">/bilan/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/boutique" role="button">/boutique</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/compte" role="button">/compte</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/conso" role="button">/conso</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/conso" role="button">/conso/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/equipement" role="button">/equipement</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/equipement" role="button">/equipement/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/etranger" role="button">/etranger</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/etranger" role="button">/etranger/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/famille" role="button">/famille</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/facture" role="button">/facture</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/facture" role="button">/facture/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/facture-d" role="button">/facture-d</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/facture-d" role="button">/facture-d/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/facture-e" role="button">/facture-e</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/facture-e" role="button">/facture-e/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/facture-h" role="button">/facture-h</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/facture-h" role="button">/facture-h/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/help" role="button">/help</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/mobile" role="button">/mobile</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/mobile" role="button">/mobile/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/news" role="button">/news</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/noter" role="button">/noter</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/notif" role="button">/notif</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/offre-4g-h" role="button">/offre-4g-h</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/offre-4g-h" role="button">/offre-4g-h/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/offre-i" role="button">/offre-i</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/offre-i" role="button">/offre-i/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/offre-m" role="button">/offre-m</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/offre-m" role="button">/offre-m/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/offre-options" role="button">/offre-options</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/offre-options" role="button">/offre-options/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/param" role="button">/param</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/param" role="button">/param/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/param-f" role="button">/param-f</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/param-f" role="button">/param-f/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/pass-r" role="button">/pass-r</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/pass-r" role="button">/pass-r/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/premium" role="button">/premium</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/reclamation" role="button">/reclamation</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/reclamation" role="button">/reclamation/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/store" role="button">/store</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/tuto" role="button">/tuto</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/usage" role="button">/usage</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/usage" role="button">/usage/*</a>
+                <a class="btn btn-primary" href="https://orange.karlcosse.com/verif" role="button">/verif</a>
+              </div>
+    </div>
+      <div class="panel panel-default">
+      <a name="oemrecetteerablesettings"></a>
+      <div class="panel-heading">
+          <h3><img src="./dist/images/OrangeEtMoi.png" /> Universal Links - Recette Erable (Settings)</h3>
+      </div>
+      <div class="panel-body">
+                <a class="btn btn-primary" href="https://r-my.orange.fr/accueil" role="button">/accueil</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/accueil" role="button">/accueil/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/ajout-c" role="button">/ajout-c</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/apps" role="button">/apps</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/avantage" role="button">/avantage</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/avantage" role="button">/avantage/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/avantage-f" role="button">/avantage-f</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/bilan" role="button">/bilan</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/bilan" role="button">/bilan/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/boutique" role="button">/boutique</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/compte" role="button">/compte</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/conso" role="button">/conso</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/conso" role="button">/conso/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/equipement" role="button">/equipement</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/equipement" role="button">/equipement/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/etranger" role="button">/etranger</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/etranger" role="button">/etranger/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/famille" role="button">/famille</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/facture" role="button">/facture</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/facture" role="button">/facture/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/facture-d" role="button">/facture-d</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/facture-d" role="button">/facture-d/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/facture-e" role="button">/facture-e</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/facture-e" role="button">/facture-e/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/facture-h" role="button">/facture-h</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/facture-h" role="button">/facture-h/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/help" role="button">/help</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/mobile" role="button">/mobile</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/mobile" role="button">/mobile/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/news" role="button">/news</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/noter" role="button">/noter</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/notif" role="button">/notif</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/offre-4g-h" role="button">/offre-4g-h</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/offre-4g-h" role="button">/offre-4g-h/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/offre-i" role="button">/offre-i</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/offre-i" role="button">/offre-i/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/offre-m" role="button">/offre-m</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/offre-m" role="button">/offre-m/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/offre-options" role="button">/offre-options</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/offre-options" role="button">/offre-options/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/param" role="button">/param</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/param" role="button">/param/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/param-f" role="button">/param-f</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/param-f" role="button">/param-f/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/pass-r" role="button">/pass-r</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/pass-r" role="button">/pass-r/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/premium" role="button">/premium</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/reclamation" role="button">/reclamation</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/reclamation" role="button">/reclamation/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/store" role="button">/store</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/tuto" role="button">/tuto</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/usage" role="button">/usage</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/usage" role="button">/usage/*</a>
+                <a class="btn btn-primary" href="https://r-my.orange.fr/verif" role="button">/verif</a>
+              </div>
+    </div>
+      <div class="panel panel-default">
+      <a name="oemmetroerablesettings"></a>
+      <div class="panel-heading">
+          <h3><img src="./dist/images/OrangeEtMoi.png" /> Universal Links - Métrologie Erable (Settings)</h3>
+      </div>
+      <div class="panel-body">
+                <a class="btn btn-primary" href="https://m-my.orange.fr/accueil" role="button">/accueil</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/accueil" role="button">/accueil/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/ajout-c" role="button">/ajout-c</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/apps" role="button">/apps</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/avantage" role="button">/avantage</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/avantage" role="button">/avantage/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/avantage-f" role="button">/avantage-f</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/bilan" role="button">/bilan</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/bilan" role="button">/bilan/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/boutique" role="button">/boutique</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/compte" role="button">/compte</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/conso" role="button">/conso</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/conso" role="button">/conso/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/equipement" role="button">/equipement</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/equipement" role="button">/equipement/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/etranger" role="button">/etranger</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/etranger" role="button">/etranger/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/famille" role="button">/famille</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/facture" role="button">/facture</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/facture" role="button">/facture/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/facture-d" role="button">/facture-d</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/facture-d" role="button">/facture-d/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/facture-e" role="button">/facture-e</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/facture-e" role="button">/facture-e/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/facture-h" role="button">/facture-h</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/facture-h" role="button">/facture-h/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/help" role="button">/help</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/mobile" role="button">/mobile</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/mobile" role="button">/mobile/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/news" role="button">/news</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/noter" role="button">/noter</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/notif" role="button">/notif</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/offre-4g-h" role="button">/offre-4g-h</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/offre-4g-h" role="button">/offre-4g-h/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/offre-i" role="button">/offre-i</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/offre-i" role="button">/offre-i/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/offre-m" role="button">/offre-m</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/offre-m" role="button">/offre-m/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/offre-options" role="button">/offre-options</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/offre-options" role="button">/offre-options/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/param" role="button">/param</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/param" role="button">/param/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/param-f" role="button">/param-f</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/param-f" role="button">/param-f/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/pass-r" role="button">/pass-r</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/pass-r" role="button">/pass-r/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/premium" role="button">/premium</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/reclamation" role="button">/reclamation</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/reclamation" role="button">/reclamation/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/store" role="button">/store</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/tuto" role="button">/tuto</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/usage" role="button">/usage</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/usage" role="button">/usage/*</a>
+                <a class="btn btn-primary" href="https://m-my.orange.fr/verif" role="button">/verif</a>
+              </div>
+    </div>
+      <div class="panel panel-default">
+      <a name="oempreproderablesettings"></a>
+      <div class="panel-heading">
+          <h3><img src="./dist/images/OrangeEtMoi.png" /> Universal Links - Prod cachée Erable (Settings)</h3>
+      </div>
+      <div class="panel-body">
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/accueil" role="button">/accueil</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/accueil" role="button">/accueil/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/ajout-c" role="button">/ajout-c</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/apps" role="button">/apps</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/avantage" role="button">/avantage</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/avantage" role="button">/avantage/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/avantage-f" role="button">/avantage-f</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/bilan" role="button">/bilan</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/bilan" role="button">/bilan/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/boutique" role="button">/boutique</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/compte" role="button">/compte</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/conso" role="button">/conso</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/conso" role="button">/conso/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/equipement" role="button">/equipement</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/equipement" role="button">/equipement/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/etranger" role="button">/etranger</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/etranger" role="button">/etranger/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/famille" role="button">/famille</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/facture" role="button">/facture</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/facture" role="button">/facture/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/facture-d" role="button">/facture-d</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/facture-d" role="button">/facture-d/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/facture-e" role="button">/facture-e</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/facture-e" role="button">/facture-e/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/facture-h" role="button">/facture-h</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/facture-h" role="button">/facture-h/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/help" role="button">/help</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/mobile" role="button">/mobile</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/mobile" role="button">/mobile/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/news" role="button">/news</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/noter" role="button">/noter</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/notif" role="button">/notif</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/offre-4g-h" role="button">/offre-4g-h</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/offre-4g-h" role="button">/offre-4g-h/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/offre-i" role="button">/offre-i</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/offre-i" role="button">/offre-i/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/offre-m" role="button">/offre-m</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/offre-m" role="button">/offre-m/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/offre-options" role="button">/offre-options</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/offre-options" role="button">/offre-options/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/param" role="button">/param</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/param" role="button">/param/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/param-f" role="button">/param-f</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/param-f" role="button">/param-f/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/pass-r" role="button">/pass-r</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/pass-r" role="button">/pass-r/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/premium" role="button">/premium</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/reclamation" role="button">/reclamation</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/reclamation" role="button">/reclamation/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/store" role="button">/store</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/tuto" role="button">/tuto</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/usage" role="button">/usage</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/usage" role="button">/usage/*</a>
+                <a class="btn btn-primary" href="https://pp-my.orange.fr/verif" role="button">/verif</a>
+              </div>
+    </div>
+      <div class="panel panel-default">
+      <a name="oemproduction"></a>
+      <div class="panel-heading">
+          <h3><img src="./dist/images/OrangeEtMoi.png" /> Universal Links - Production</h3>
+      </div>
+      <div class="panel-body">
+                <a class="btn btn-primary" href="https://my.orange.fr/accueil" role="button">/accueil</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/accueil" role="button">/accueil/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/ajout-c" role="button">/ajout-c</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/apps" role="button">/apps</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/avantage" role="button">/avantage</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/avantage" role="button">/avantage/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/avantage-f" role="button">/avantage-f</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/bilan" role="button">/bilan</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/bilan" role="button">/bilan/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/boutique" role="button">/boutique</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/compte" role="button">/compte</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/conso" role="button">/conso</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/conso" role="button">/conso/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/equipement" role="button">/equipement</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/equipement" role="button">/equipement/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/etranger" role="button">/etranger</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/etranger" role="button">/etranger/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/famille" role="button">/famille</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/facture" role="button">/facture</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/facture" role="button">/facture/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/facture-d" role="button">/facture-d</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/facture-d" role="button">/facture-d/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/facture-e" role="button">/facture-e</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/facture-e" role="button">/facture-e/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/facture-h" role="button">/facture-h</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/facture-h" role="button">/facture-h/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/help" role="button">/help</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/mobile" role="button">/mobile</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/mobile" role="button">/mobile/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/news" role="button">/news</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/noter" role="button">/noter</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/notif" role="button">/notif</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/offre-4g-h" role="button">/offre-4g-h</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/offre-4g-h" role="button">/offre-4g-h/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/offre-i" role="button">/offre-i</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/offre-i" role="button">/offre-i/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/offre-m" role="button">/offre-m</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/offre-m" role="button">/offre-m/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/offre-options" role="button">/offre-options</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/offre-options" role="button">/offre-options/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/param" role="button">/param</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/param" role="button">/param/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/param-f" role="button">/param-f</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/param-f" role="button">/param-f/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/pass-r" role="button">/pass-r</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/pass-r" role="button">/pass-r/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/premium" role="button">/premium</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/reclamation" role="button">/reclamation</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/reclamation" role="button">/reclamation/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/store" role="button">/store</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/tuto" role="button">/tuto</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/usage" role="button">/usage</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/usage" role="button">/usage/*</a>
+                <a class="btn btn-primary" href="https://my.orange.fr/verif" role="button">/verif</a>
+              </div>
+    </div>
+  
+      <div class="panel panel-default">
+      <a name="oemsettingsscheme"></a>
+      <div class="panel-heading">
+          <h3><img src="./dist/images/OrangeEtMoi.png" /> URL Scheme - Settings</h3>
+      </div>
+      <div class="panel-body">
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://accueil" role="button">/accueil</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://accueil" role="button">/accueil/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://ajout-c" role="button">/ajout-c</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://apps" role="button">/apps</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://avantage" role="button">/avantage</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://avantage" role="button">/avantage/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://avantage-f" role="button">/avantage-f</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://bilan" role="button">/bilan</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://bilan" role="button">/bilan/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://boutique" role="button">/boutique</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://compte" role="button">/compte</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://conso" role="button">/conso</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://conso" role="button">/conso/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://equipement" role="button">/equipement</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://equipement" role="button">/equipement/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://etranger" role="button">/etranger</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://etranger" role="button">/etranger/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://famille" role="button">/famille</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://facture" role="button">/facture</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://facture" role="button">/facture/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://facture-d" role="button">/facture-d</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://facture-d" role="button">/facture-d/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://facture-e" role="button">/facture-e</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://facture-e" role="button">/facture-e/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://facture-h" role="button">/facture-h</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://facture-h" role="button">/facture-h/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://help" role="button">/help</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://mobile" role="button">/mobile</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://mobile" role="button">/mobile/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://news" role="button">/news</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://noter" role="button">/noter</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://notif" role="button">/notif</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://offre-4g-h" role="button">/offre-4g-h</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://offre-4g-h" role="button">/offre-4g-h/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://offre-i" role="button">/offre-i</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://offre-i" role="button">/offre-i/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://offre-m" role="button">/offre-m</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://offre-m" role="button">/offre-m/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://offre-options" role="button">/offre-options</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://offre-options" role="button">/offre-options/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://param" role="button">/param</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://param" role="button">/param/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://param-f" role="button">/param-f</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://param-f" role="button">/param-f/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://pass-r" role="button">/pass-r</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://pass-r" role="button">/pass-r/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://premium" role="button">/premium</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://reclamation" role="button">/reclamation</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://reclamation" role="button">/reclamation/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://store" role="button">/store</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://tuto" role="button">/tuto</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://usage" role="button">/usage</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://usage" role="button">/usage/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoisettings.bdx2://verif" role="button">/verif</a>
+              </div>
+    </div>
+      <div class="panel panel-default">
+      <a name="oemprodscheme"></a>
+      <div class="panel-heading">
+          <h3><img src="./dist/images/OrangeEtMoi.png" /> URL Scheme - Production</h3>
+      </div>
+      <div class="panel-body">
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://accueil" role="button">/accueil</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://accueil" role="button">/accueil/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://ajout-c" role="button">/ajout-c</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://apps" role="button">/apps</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://avantage" role="button">/avantage</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://avantage" role="button">/avantage/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://avantage-f" role="button">/avantage-f</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://bilan" role="button">/bilan</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://bilan" role="button">/bilan/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://boutique" role="button">/boutique</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://compte" role="button">/compte</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://conso" role="button">/conso</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://conso" role="button">/conso/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://equipement" role="button">/equipement</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://equipement" role="button">/equipement/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://etranger" role="button">/etranger</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://etranger" role="button">/etranger/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://famille" role="button">/famille</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://facture" role="button">/facture</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://facture" role="button">/facture/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://facture-d" role="button">/facture-d</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://facture-d" role="button">/facture-d/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://facture-e" role="button">/facture-e</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://facture-e" role="button">/facture-e/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://facture-h" role="button">/facture-h</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://facture-h" role="button">/facture-h/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://help" role="button">/help</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://mobile" role="button">/mobile</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://mobile" role="button">/mobile/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://news" role="button">/news</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://noter" role="button">/noter</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://notif" role="button">/notif</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://offre-4g-h" role="button">/offre-4g-h</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://offre-4g-h" role="button">/offre-4g-h/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://offre-i" role="button">/offre-i</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://offre-i" role="button">/offre-i/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://offre-m" role="button">/offre-m</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://offre-m" role="button">/offre-m/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://offre-options" role="button">/offre-options</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://offre-options" role="button">/offre-options/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://param" role="button">/param</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://param" role="button">/param/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://param-f" role="button">/param-f</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://param-f" role="button">/param-f/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://pass-r" role="button">/pass-r</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://pass-r" role="button">/pass-r/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://premium" role="button">/premium</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://reclamation" role="button">/reclamation</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://reclamation" role="button">/reclamation/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://store" role="button">/store</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://tuto" role="button">/tuto</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://usage" role="button">/usage</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://usage" role="button">/usage/*</a>
+                <a class="btn btn-success" href="com.orange.fr.orangeetmoi://verif" role="button">/verif</a>
+              </div>
+    </div>
+  
+      <div class="panel panel-default">
+      <a name="soshrecetteerablesettings"></a>
+      <div class="panel-heading">
+          <h3><img src="./dist/images/MySosh.png" /> Universal Links - Recette Erable (Settings)</h3>
+      </div>
+      <div class="panel-body">
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/accueil" role="button">/accueil</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/accueil" role="button">/accueil/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/ajout-c" role="button">/ajout-c</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/apps" role="button">/apps</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/avantage" role="button">/avantage</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/avantage" role="button">/avantage/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/avantage-f" role="button">/avantage-f</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/bilan" role="button">/bilan</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/bilan" role="button">/bilan/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/boutique" role="button">/boutique</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/compte" role="button">/compte</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/conso" role="button">/conso</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/conso" role="button">/conso/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/equipement" role="button">/equipement</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/equipement" role="button">/equipement/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/etranger" role="button">/etranger</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/etranger" role="button">/etranger/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/famille" role="button">/famille</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/facture" role="button">/facture</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/facture" role="button">/facture/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/facture-d" role="button">/facture-d</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/facture-d" role="button">/facture-d/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/facture-e" role="button">/facture-e</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/facture-e" role="button">/facture-e/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/facture-h" role="button">/facture-h</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/facture-h" role="button">/facture-h/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/help" role="button">/help</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/mobile" role="button">/mobile</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/mobile" role="button">/mobile/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/news" role="button">/news</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/noter" role="button">/noter</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/notif" role="button">/notif</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/offre-4g-h" role="button">/offre-4g-h</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/offre-4g-h" role="button">/offre-4g-h/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/offre-i" role="button">/offre-i</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/offre-i" role="button">/offre-i/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/offre-m" role="button">/offre-m</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/offre-m" role="button">/offre-m/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/offre-options" role="button">/offre-options</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/offre-options" role="button">/offre-options/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/param" role="button">/param</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/param" role="button">/param/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/param-f" role="button">/param-f</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/param-f" role="button">/param-f/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/pass-r" role="button">/pass-r</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/pass-r" role="button">/pass-r/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/premium" role="button">/premium</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/reclamation" role="button">/reclamation</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/reclamation" role="button">/reclamation/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/store" role="button">/store</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/tuto" role="button">/tuto</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/usage" role="button">/usage</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/usage" role="button">/usage/*</a>
+                <a class="btn btn-primary" href="https://r-my.sosh.fr/verif" role="button">/verif</a>
+              </div>
+    </div>
+      <div class="panel panel-default">
+      <a name="soshmetroerablesettings"></a>
+      <div class="panel-heading">
+          <h3><img src="./dist/images/MySosh.png" /> Universal Links - Métrologie Erable (Settings)</h3>
+      </div>
+      <div class="panel-body">
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/accueil" role="button">/accueil</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/accueil" role="button">/accueil/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/ajout-c" role="button">/ajout-c</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/apps" role="button">/apps</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/avantage" role="button">/avantage</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/avantage" role="button">/avantage/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/avantage-f" role="button">/avantage-f</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/bilan" role="button">/bilan</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/bilan" role="button">/bilan/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/boutique" role="button">/boutique</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/compte" role="button">/compte</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/conso" role="button">/conso</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/conso" role="button">/conso/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/equipement" role="button">/equipement</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/equipement" role="button">/equipement/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/etranger" role="button">/etranger</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/etranger" role="button">/etranger/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/famille" role="button">/famille</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/facture" role="button">/facture</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/facture" role="button">/facture/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/facture-d" role="button">/facture-d</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/facture-d" role="button">/facture-d/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/facture-e" role="button">/facture-e</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/facture-e" role="button">/facture-e/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/facture-h" role="button">/facture-h</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/facture-h" role="button">/facture-h/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/help" role="button">/help</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/mobile" role="button">/mobile</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/mobile" role="button">/mobile/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/news" role="button">/news</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/noter" role="button">/noter</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/notif" role="button">/notif</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/offre-4g-h" role="button">/offre-4g-h</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/offre-4g-h" role="button">/offre-4g-h/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/offre-i" role="button">/offre-i</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/offre-i" role="button">/offre-i/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/offre-m" role="button">/offre-m</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/offre-m" role="button">/offre-m/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/offre-options" role="button">/offre-options</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/offre-options" role="button">/offre-options/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/param" role="button">/param</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/param" role="button">/param/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/param-f" role="button">/param-f</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/param-f" role="button">/param-f/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/pass-r" role="button">/pass-r</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/pass-r" role="button">/pass-r/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/premium" role="button">/premium</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/reclamation" role="button">/reclamation</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/reclamation" role="button">/reclamation/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/store" role="button">/store</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/tuto" role="button">/tuto</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/usage" role="button">/usage</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/usage" role="button">/usage/*</a>
+                <a class="btn btn-primary" href="https://m-my.sosh.fr/verif" role="button">/verif</a>
+              </div>
+    </div>
+      <div class="panel panel-default">
+      <a name="soshpreproderablesettings"></a>
+      <div class="panel-heading">
+          <h3><img src="./dist/images/MySosh.png" /> Universal Links - Prod cachée Erable (Settings)</h3>
+      </div>
+      <div class="panel-body">
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/accueil" role="button">/accueil</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/accueil" role="button">/accueil/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/ajout-c" role="button">/ajout-c</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/apps" role="button">/apps</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/avantage" role="button">/avantage</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/avantage" role="button">/avantage/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/avantage-f" role="button">/avantage-f</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/bilan" role="button">/bilan</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/bilan" role="button">/bilan/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/boutique" role="button">/boutique</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/compte" role="button">/compte</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/conso" role="button">/conso</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/conso" role="button">/conso/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/equipement" role="button">/equipement</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/equipement" role="button">/equipement/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/etranger" role="button">/etranger</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/etranger" role="button">/etranger/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/famille" role="button">/famille</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/facture" role="button">/facture</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/facture" role="button">/facture/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/facture-d" role="button">/facture-d</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/facture-d" role="button">/facture-d/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/facture-e" role="button">/facture-e</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/facture-e" role="button">/facture-e/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/facture-h" role="button">/facture-h</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/facture-h" role="button">/facture-h/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/help" role="button">/help</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/mobile" role="button">/mobile</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/mobile" role="button">/mobile/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/news" role="button">/news</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/noter" role="button">/noter</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/notif" role="button">/notif</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/offre-4g-h" role="button">/offre-4g-h</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/offre-4g-h" role="button">/offre-4g-h/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/offre-i" role="button">/offre-i</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/offre-i" role="button">/offre-i/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/offre-m" role="button">/offre-m</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/offre-m" role="button">/offre-m/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/offre-options" role="button">/offre-options</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/offre-options" role="button">/offre-options/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/param" role="button">/param</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/param" role="button">/param/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/param-f" role="button">/param-f</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/param-f" role="button">/param-f/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/pass-r" role="button">/pass-r</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/pass-r" role="button">/pass-r/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/premium" role="button">/premium</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/reclamation" role="button">/reclamation</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/reclamation" role="button">/reclamation/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/store" role="button">/store</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/tuto" role="button">/tuto</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/usage" role="button">/usage</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/usage" role="button">/usage/*</a>
+                <a class="btn btn-primary" href="https://pp-my.sosh.fr/verif" role="button">/verif</a>
+              </div>
+    </div>
+      <div class="panel panel-default">
+      <a name="soshproduction"></a>
+      <div class="panel-heading">
+          <h3><img src="./dist/images/MySosh.png" /> Universal Links - Production</h3>
+      </div>
+      <div class="panel-body">
+                <a class="btn btn-primary" href="https://my.sosh.fr/accueil" role="button">/accueil</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/accueil" role="button">/accueil/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/ajout-c" role="button">/ajout-c</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/apps" role="button">/apps</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/avantage" role="button">/avantage</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/avantage" role="button">/avantage/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/avantage-f" role="button">/avantage-f</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/bilan" role="button">/bilan</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/bilan" role="button">/bilan/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/boutique" role="button">/boutique</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/compte" role="button">/compte</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/conso" role="button">/conso</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/conso" role="button">/conso/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/equipement" role="button">/equipement</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/equipement" role="button">/equipement/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/etranger" role="button">/etranger</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/etranger" role="button">/etranger/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/famille" role="button">/famille</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/facture" role="button">/facture</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/facture" role="button">/facture/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/facture-d" role="button">/facture-d</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/facture-d" role="button">/facture-d/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/facture-e" role="button">/facture-e</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/facture-e" role="button">/facture-e/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/facture-h" role="button">/facture-h</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/facture-h" role="button">/facture-h/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/help" role="button">/help</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/mobile" role="button">/mobile</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/mobile" role="button">/mobile/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/news" role="button">/news</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/noter" role="button">/noter</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/notif" role="button">/notif</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/offre-4g-h" role="button">/offre-4g-h</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/offre-4g-h" role="button">/offre-4g-h/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/offre-i" role="button">/offre-i</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/offre-i" role="button">/offre-i/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/offre-m" role="button">/offre-m</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/offre-m" role="button">/offre-m/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/offre-options" role="button">/offre-options</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/offre-options" role="button">/offre-options/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/param" role="button">/param</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/param" role="button">/param/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/param-f" role="button">/param-f</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/param-f" role="button">/param-f/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/pass-r" role="button">/pass-r</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/pass-r" role="button">/pass-r/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/premium" role="button">/premium</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/reclamation" role="button">/reclamation</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/reclamation" role="button">/reclamation/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/store" role="button">/store</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/tuto" role="button">/tuto</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/usage" role="button">/usage</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/usage" role="button">/usage/*</a>
+                <a class="btn btn-primary" href="https://my.sosh.fr/verif" role="button">/verif</a>
+              </div>
+    </div>
+  
+      <div class="panel panel-default">
+      <a name="soshsettingsscheme"></a>
+      <div class="panel-heading">
+          <h3><img src="./dist/images/MySosh.png" /> URL Scheme - Settings</h3>
+      </div>
+      <div class="panel-body">
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://accueil" role="button">/accueil</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://accueil" role="button">/accueil/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://ajout-c" role="button">/ajout-c</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://apps" role="button">/apps</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://avantage" role="button">/avantage</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://avantage" role="button">/avantage/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://avantage-f" role="button">/avantage-f</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://bilan" role="button">/bilan</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://bilan" role="button">/bilan/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://boutique" role="button">/boutique</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://compte" role="button">/compte</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://conso" role="button">/conso</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://conso" role="button">/conso/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://equipement" role="button">/equipement</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://equipement" role="button">/equipement/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://etranger" role="button">/etranger</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://etranger" role="button">/etranger/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://famille" role="button">/famille</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://facture" role="button">/facture</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://facture" role="button">/facture/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://facture-d" role="button">/facture-d</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://facture-d" role="button">/facture-d/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://facture-e" role="button">/facture-e</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://facture-e" role="button">/facture-e/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://facture-h" role="button">/facture-h</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://facture-h" role="button">/facture-h/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://help" role="button">/help</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://mobile" role="button">/mobile</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://mobile" role="button">/mobile/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://news" role="button">/news</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://noter" role="button">/noter</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://notif" role="button">/notif</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://offre-4g-h" role="button">/offre-4g-h</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://offre-4g-h" role="button">/offre-4g-h/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://offre-i" role="button">/offre-i</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://offre-i" role="button">/offre-i/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://offre-m" role="button">/offre-m</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://offre-m" role="button">/offre-m/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://offre-options" role="button">/offre-options</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://offre-options" role="button">/offre-options/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://param" role="button">/param</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://param" role="button">/param/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://param-f" role="button">/param-f</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://param-f" role="button">/param-f/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://pass-r" role="button">/pass-r</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://pass-r" role="button">/pass-r/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://premium" role="button">/premium</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://reclamation" role="button">/reclamation</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://reclamation" role="button">/reclamation/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://store" role="button">/store</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://tuto" role="button">/tuto</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://usage" role="button">/usage</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://usage" role="button">/usage/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysoshsettings.bdx2://verif" role="button">/verif</a>
+              </div>
+    </div>
+      <div class="panel panel-default">
+      <a name="soshprodscheme"></a>
+      <div class="panel-heading">
+          <h3><img src="./dist/images/MySosh.png" /> URL Scheme - Production</h3>
+      </div>
+      <div class="panel-body">
+                <a class="btn btn-success" href="com.orange.fr.mysosh://accueil" role="button">/accueil</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://accueil" role="button">/accueil/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://ajout-c" role="button">/ajout-c</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://apps" role="button">/apps</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://avantage" role="button">/avantage</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://avantage" role="button">/avantage/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://avantage-f" role="button">/avantage-f</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://bilan" role="button">/bilan</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://bilan" role="button">/bilan/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://boutique" role="button">/boutique</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://compte" role="button">/compte</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://conso" role="button">/conso</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://conso" role="button">/conso/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://equipement" role="button">/equipement</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://equipement" role="button">/equipement/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://etranger" role="button">/etranger</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://etranger" role="button">/etranger/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://famille" role="button">/famille</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://facture" role="button">/facture</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://facture" role="button">/facture/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://facture-d" role="button">/facture-d</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://facture-d" role="button">/facture-d/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://facture-e" role="button">/facture-e</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://facture-e" role="button">/facture-e/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://facture-h" role="button">/facture-h</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://facture-h" role="button">/facture-h/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://help" role="button">/help</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://mobile" role="button">/mobile</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://mobile" role="button">/mobile/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://news" role="button">/news</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://noter" role="button">/noter</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://notif" role="button">/notif</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://offre-4g-h" role="button">/offre-4g-h</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://offre-4g-h" role="button">/offre-4g-h/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://offre-i" role="button">/offre-i</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://offre-i" role="button">/offre-i/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://offre-m" role="button">/offre-m</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://offre-m" role="button">/offre-m/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://offre-options" role="button">/offre-options</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://offre-options" role="button">/offre-options/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://param" role="button">/param</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://param" role="button">/param/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://param-f" role="button">/param-f</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://param-f" role="button">/param-f/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://pass-r" role="button">/pass-r</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://pass-r" role="button">/pass-r/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://premium" role="button">/premium</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://reclamation" role="button">/reclamation</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://reclamation" role="button">/reclamation/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://store" role="button">/store</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://tuto" role="button">/tuto</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://usage" role="button">/usage</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://usage" role="button">/usage/*</a>
+                <a class="btn btn-success" href="com.orange.fr.mysosh://verif" role="button">/verif</a>
+              </div>
+    </div>
+  
+</section>
+
+</body>
+</html>
